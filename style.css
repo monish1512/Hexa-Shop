@@ -17,7 +17,8 @@ nav {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1000;background-color: white;
+  z-index: 1000;
+  background-color: white;
 }
 
 nav a {
@@ -52,7 +53,7 @@ nav a {
   position: absolute;
   background-color: white;
   width: 170px;
-  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
   z-index: 1000;
   border-radius: 5px;
 }
@@ -83,13 +84,14 @@ nav a {
   width: 100%;
   height: 85vh;
   display: flex;
+  justify-content: space-around;
   align-items: stretch;
   border-top: 3px dotted rgb(233, 230, 230);
   border-bottom: 3px dotted rgb(230, 227, 227);
 }
 
 .left {
-  width: 45%;
+  width: 47%;
   display: flex;
   justify-content: center;
   align-items: stretch;
@@ -148,7 +150,7 @@ nav a {
   justify-content: space-evenly;
   flex-wrap: wrap;
   align-items: center;
-  width: 55%;
+  width: 52%;
   height: 100%;
 }
 
@@ -213,84 +215,305 @@ nav a {
 .bnrcon:hover .l2card {
   display: flex;
 }
-#mensection, #p1, #p2, #p3,#p6 {
+
+#mensection,
+#p1,
+#p2,
+#p3,
+#p6 {
   scroll-margin-top: 13vh;
 }
-.mensection {
-  padding: 60px 5%;
+/* ================= MEN'S STYLES ================= */
+.mens {
+  padding-bottom: 50px;
 }
-.mensection > h1 {
-  font-size: 225%;
-  padding-bottom: 5px;
-}
-.mensection > p {
-  color: gray;
-}
-.mencardcon {
-  width: 100%;
-  display: flex;
-  justify-content: space-evenly;
-  margin-top: 20px;
-  border-bottom: 3px dotted rgb(230, 227, 227);
-}
-.mencard {
-  width: 30%;
-  height: 500px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-.menimg {
-  width: 100%;
-  height: 400px;
-  position: relative;
-}
-.menimg img {
-  width: 100%;
-  height: 100%;
-}
-.menicon {
-  width: 100%;
-  height: 40px;
-  background: transparent;
+
+.mens-header {
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 50px 0 20px 0;
+  color: black;
+}
+
+.mens-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 30px;
+  position: relative;
+}
+
+
+.fa-less-than,
+.fa-greater-than {
   position: absolute;
-  left: 0px;
-  bottom: 0px;
-  transition: 0.5s ease-out;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 22px;
+  color: black;
+  cursor: pointer;
+}
+
+.fa-less-than {
+  left: 10px;
+}
+
+.fa-greater-than {
+  right: 10px;
+}
+
+
+.mens-card {
+  width: 27%;
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(179, 0, 89, 0.2);
+}
+
+.mens-card-img {
+  position: relative;
+}
+
+.mens-card-img img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.mens-icons {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  bottom: 10%;
   opacity: 0;
 }
 
-.ic {
-  width: 40px;
-  height: 40px;
-  background-color: white;
-  line-height: 40px;
-  text-align: center;
+.mens-icons .ic {
+  width: 35px;
+  height: 35px;
   border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  box-shadow: 0 5px 15px rgba(179, 0, 89, 0.2);
 }
 
-.menimg:hover .menicon {
+.mens-card:hover .mens-icons {
   opacity: 1;
-  bottom: 10%;
 }
-.mencardtitle {
-  width: 100%;
+
+.mens-title {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 10px 15px;
+  color: black;
 }
-.mencardtitle i {
-  font-size: 10px;
+
+.mens-title h2 {
+  font-size: 1.2rem;
 }
-.mencard > p {
-  font-size: 20px;
-  font-style: italic;
-  color: grey;
+
+.mens-title p i {
+  color: gold;
+}
+
+.mens-price {
+  font-size: 1.1rem;
   font-weight: bold;
+  padding: 10px 15px;
+  color: black;
 }
+
+/* ================= WOMEN'S STYLES ================= */
+.womens {
+  padding-bottom: 50px;
+}
+
+.womens-header {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 50px 0 20px 0;
+  color: black;
+}
+
+.womens-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  position: relative;
+}
+
+.womens-card {
+  width: 27%;
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(179, 0, 89, 0.2);
+}
+
+.womens-card-img {
+  position: relative;
+}
+
+.womens-card-img img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.womens-icons {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  width: 100%;
+  bottom: 10%;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.womens-icons .ic {
+  width: 35px;
+  height: 35px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  box-shadow: 0 5px 15px rgba(179, 0, 89, 0.2);
+}
+
+.womens-card:hover .womens-icons {
+  opacity: 1;
+}
+
+.womens-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  color: black;
+}
+
+.womens-title h2 {
+  font-size: 1.2rem;
+}
+
+.womens-title p i {
+  color: gold;
+}
+
+.womens-price {
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 10px 15px;
+  color: black;
+}
+
+/*  KIDS */
+.kids {
+  padding-bottom: 50px;
+}
+
+.kids-header {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 50px 0 20px 0;
+  color: black;
+}
+
+.kids-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  position: relative;
+}
+
+.kids-card {
+  width: 27%;
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(179, 0, 89, 0.2);
+}
+
+.kids-card-img {
+  position: relative;
+}
+
+.kids-card-img img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.kids-icons {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  width: 100%;
+  bottom: 10%;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.kids-icons .ic {
+  width: 35px;
+  height: 35px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  box-shadow: 0 5px 15px rgba(179, 0, 89, 0.2);
+}
+
+.kids-card:hover .kids-icons {
+  opacity: 1;
+}
+
+.kids-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  color: black;
+}
+
+.kids-title h2 {
+  font-size: 1.2rem;
+}
+
+.kids-title p i {
+  color: gold;
+}
+
+.kids-price {
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 10px 15px;
+  color: black;
+}
+
+/* Explore */
+
 .explore {
   width: 100%;
   height: 100vh;
